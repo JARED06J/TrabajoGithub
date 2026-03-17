@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.hero {
+  background-color: #b94a7a;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  width: 50%;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.hero-btn {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
+
+/* IMAGEN */
+.hero-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-image img {
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+/* fondo oscuro detrás del gato */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 500px;
+  background-color: #0b0b1a;
+  border-radius: 150px;
+  z-index: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-image::before {
+    width: 200px;
+    height: 350px;
+  }
+
+  .hero-image img {
+    max-width: 250px;
+  }
+}
